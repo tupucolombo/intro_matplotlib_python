@@ -1,4 +1,4 @@
-# Matplotlib [Python]
+# Numpy [Python]
 # Ejercicios de práctica
 
 # Autor: Inove Coding School
@@ -7,43 +7,47 @@
 # IMPORTANTE: NO borrar los comentarios
 # que aparecen en verde con el hashtag "#"
 
-# Ejercicios de matplotlib
-import numpy as np
-import matplotlib.pyplot as plt
+# Ejercicios con comprensión de listas
 
 
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
-    print("Scatter Plot")
+    
+    # Práctica de comprensión de listas
+    # 1)
+    # Generar una lista a partir de comprensión de listas,
+    # esta lista generada deberá tener un tamaño de 11
+    # números, conteniendo del 0 al 10 inclusive
 
-    # NOTA: aproveche los ejemplos "scatter_plot" de clase
+    # lista_0_10 = [......]
+    lista_0_10 = [x for x in range (0, 11)]
+    print (lista_0_10)
 
-    # Se desea graficar la función tanh para el siguiente
-    # intervalor de valores de "X"
-    x = np.arange(-np.pi, np.pi, 0.1)
+    
+    # 2)
+    # Generar una lista a partir de comprensión de listas,
+    # esta lista generada deberá contener la tabla del 5,
+    # desde el múltiplo 0 al múltiplo 10
+    # El resultado esperado es:
+    # [0 5 10 15 20 25 30 35 40 45 50]
+    # Utilizar comprensión de listas para generar essa lista
+    # Lo esperable es que realicen una lista de 11 elementos,
+    # del 0 al 10 (como el ejer anterior) pero que cada
+    # elemento lo multipliquen x5.
 
-    # Función y = tanh(x) --> tangente hiperbólica
-    y = np.tanh(x)
+    # tabla_5 = [......]
+    tabla_5 = [x*5 for x in range (0, 11)]
+    print(tabla_5)
 
-    # Alumno: Graficar la función utilizando "scatter"
-    # utilizando "x" e "y" ya disponible
+    # 3)
+    # Generar una lista a partir de comprensión de listas,
+    # esta lista generada deberá contener 10 números aleatorios,
+    # estos números deberán estar entre el rango 1 al 30 representando
+    # números posibles de un mes (los números pueden repetirse).
+    # NOTA: Importar el módulo random y utilizar randrange
+    # o randint para generar números aleatorios.
+    # https://docs.python.org/3/library/random.html
 
-    # Colocar la leyenda y el label con el nombre de la función
-
-    # Elegir un marker a elección
-
-    # Crear acá su gráfico
-
-    fig = plt.figure()
-    ax = fig.add_subplot()
-    ax.plot(x, y, c= "darkcyan", label= "y = tanh(x)")
-    ax.set_title ("Scatter Graphic", color ="r")
-    ax.set_xlabel ("Eje Y", color= "y")
-    ax.set_ylabel ("Eje x", color= "y")
-    ax.scatter(x, y, c='darkcyan')
-    ax.set_facecolor('whitesmoke')
-    ax.grid('solid')
-    plt.show()
-
+    # dias_mes = [.....]
 
     print("terminamos")

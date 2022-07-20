@@ -1,4 +1,4 @@
-# Matplotlib [Python]
+# Numpy [Python]
 # Ejercicios de práctica
 
 # Autor: Inove Coding School
@@ -7,56 +7,41 @@
 # IMPORTANTE: NO borrar los comentarios
 # que aparecen en verde con el hashtag "#"
 
-# Ejercicios de matplotlib
-import numpy as np
-import matplotlib.pyplot as plt
+# Ejercicios con lambda
 
 
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
-    print("Line Plot")
-
-    # NOTA: aproveche los ejemplos "multi_line_plot" de clase
-
-    # Se desea graficar varias funciones en un mismmo gráfico (axe)
-
-    # Las funciones que se desean implementar y graficar son:
-    # y1 = x**2
-    # y2 = x**3
-
-    # Su implementación ya está disponible, es la siguiente:
-    x = list(np.linspace(-4, 4, 20))
-
-    y1 = []
-    for i in x:
-        y1.append(i**2)
-
-    y2 = []
-    for i in x:
-        y2.append(i**3)
-
-    # Alumno: Realizar un gráfico que representen las dos funciones
-    # Para ello se debe llamar dos veces a "plot" con el mismo "ax"
-
-    # Se debe colocar en la leyenda la función que representa
-    # cada función
-
-    # Cada función dibujarla con un color distinto
-    # a su elección
-
-    # Crear acá su gráfico
-
-    fig = plt.figure()
-    ax = fig.add_subplot()
-    ax.plot (x, y1, color="r", label="x**2" )
-    ax.plot (x, y2, color="b", label="x**3")
-    ax.set_title("Función cuadrática y cúbica", color="g")
-    ax.set_ylabel("Eje Y", color="c")
-    ax.set_xlabel("Eje X", color="c")
-    plt.legend()
-    plt.show()
-
-
     
+    # Lambda expression
+    # 1)
+    # Realizar una funcion lambda que retorne el tamaño
+    # (len) de un string pasado como parámetro
+
+    # len_string = lambda......
+    len_string = lambda x: len(x)
+    palabra = len_string ("auto")
+    print (palabra)
+
+
+
+    # 2)
+    # Lista de string
+    palabras = ['Inove', 'casa', 'programacion']
+
+    # Utilice la función map para mapear una lambda expression
+    # que retorne el tamaño (len) de cada texto em cata iteración
+    # de la lista de textos
+    # El resultado (el len de cada palabra) se debe ir almacenando
+    # en una nueva lista
+    # Nota: realizar la lambda expression "in line"
+    # Copiar la lambda creada en el paso anterior dentro del map
+    # NOTA: No debe usar "len_string" dentro del map, debe colocar
+    # directamente la lambda.
+
+    # palabras_len = list(map....)
+
+    palabra_len = list(map(lambda x: len (x), palabra))
+    print (palabra_len)
 
     print("terminamos")

@@ -1,4 +1,4 @@
-# Matplotlib [Python]
+# Numpy [Python]
 # Ejercicios de práctica
 
 # Autor: Inove Coding School
@@ -7,40 +7,34 @@
 # IMPORTANTE: NO borrar los comentarios
 # que aparecen en verde con el hashtag "#"
 
-# Ejercicios de matplotlib
-import numpy as np
-import matplotlib.pyplot as plt
+# Ejercicios con lambda
 
 
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
-    print("Line Plot")
+    
+    # Lambda expression
+    # 1)
+    # Realizar una funcion lambda que eleve al cuadrado
+    # el número pasado como parámetro
 
-    # NOTA: aproveche los ejemplos de "line_plot" de clase
+    # potencia_2 = lambda x:......
+    # pot_3 = potencia_2(3)
 
-    # Se desea graficar los valores de "x" e "y" en un gráfico de línea
-    # A continuación los datos ya disponibles de "x" e "y" para que utilice:
-    x = list(range(-10, 11, 1))
+    # 2)
+    # Utilice la función map para mapear una lambda expression
+    # que retorne la potencia de 2 de cada numero en la lista numeros
+    # El resultado (la potencia de cada numero) se debe ir almacenando
+    # en una nueva lista
+    # Nota: realizar la lambda expression "in line", es decir,
+    # no declarar la lambda fuera del map sino diretamente dentro
+    # Copiar la lambda creada en el paso anterior dentro del map
+    # NOTA: No debe usar "potencia_2" dentro del map, debe colocar
+    # directamente la lambda.
 
-    # Bucle que completa y calcula todos los valores de "y"
-    y = []
-    for i in x:
-        y.append(i**2)
+    # Lista de numeros
+    numeros = [1, -5, 4, 3]
 
-    # Alumno: Crear una "figura" y crear un "ax" con add_subplot
-    # Graficar el "line plot" de "y" en función de "x"
-
-    # Alumno: Colocar la leyenda y el label con el nombre de la función
-    # Darle color a la línea a su elección
-
-    # Crear acá su gráfico
-
-    fig = plt.figure()
-    fig.suptitle("Función cuadrática")
-    ax = fig.add_subplot()
-    ax.plot(x, y, color = "b", label = "x2")
-    ax.legend()
-    plt.show()
-    print("Mi primer gráfico")
+    # numeros_potencia = list(map....)
 
     print("terminamos")
