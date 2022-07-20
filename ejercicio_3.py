@@ -10,6 +10,9 @@
 # Ejercicios con comprensión de listas
 
 
+import random
+
+
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     
@@ -49,5 +52,7 @@ if __name__ == '__main__':
     # https://docs.python.org/3/library/random.html
 
     # dias_mes = [.....]
+    dias_mes = [random.randint(1,30) for x in range(10)]
+    print(dias_mes)
 
     print("terminamos")
